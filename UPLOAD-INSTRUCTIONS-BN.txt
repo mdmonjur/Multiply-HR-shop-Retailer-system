@@ -1,0 +1,14 @@
+MR MONJUR MANAGEMENT UPDATE — বাংলা নির্দেশনা
+
+১) আগে আপনার GitHub repository-তে থাকা shop.html ফাইলের একটি backup রাখুন।
+২) ZIP থেকে shop.html ফাইলটি আপনার পুরোনো repository-তে আপলোড করে আগের shop.html-কে replace করুন।
+৩) index.html, hr.html এবং আপনার পুরোনো online-shop.html মুছবেন না।
+৪) GitHub Pages refresh করে Cash Memo / Shop > Admin login > Settings খুলুন।
+৫) Multi-Retailer — Super Admin Tools অংশে Retailer Name, Slug, Base URL এবং Online Shop File Path দিন। Add / Save Retailer চাপলে তালিকায় আসবে।
+৬) Open Admin Panel / Copy Login Link / Copy Online Shop Link ব্যবহার করতে পারবেন।
+
+গুরুত্বপূর্ণ সীমাবদ্ধতা:
+- এই আপডেটটি retailer-এর নাম/slug/link এই ডিভাইসের browser localStorage-এ রাখে। অন্য ফোনে নিজে থেকে sync হবে না।
+- এটি এখনো বাস্তব retailer account provision করে না, পৃথক database/RLS tenant তৈরি করে না, এবং subdomain DNS তৈরি করে না।
+- GitHub Pages-এর একই সাইটে shop.html?retailer=slug এবং online-shop.html?retailer=slug ধরনের link তৈরি হবে। আলাদা abc-store.yourdomain.com চালাতে custom domain, wildcard DNS/hosting routing এবং secure Supabase tenant/auth backend লাগবে।
+- online-shop.html এখানে কেবল reference copy হিসেবে আছে; আপনার পুরোনো customer shop ফাইল অকারণে replace করবেন না।
